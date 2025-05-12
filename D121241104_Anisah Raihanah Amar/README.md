@@ -1,8 +1,13 @@
 Nama                    : Anisah Raihanah Amar
+
 NIM                     : D121241104
+
 Materi                  : Linked Lists
-Problem Link            : https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem?isFullScreen=true 
+
+Problem Link            : https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-                              linked-list/problem?isFullScreen=true 
+
 Difficulty Level        : Easy
+
 Short Approach Summary  : 
       Soal ini meminta untuk menyisipkan node baru di awal (head) dari sebuah linked list. Linked      list bisa saja kosong (head = NULL). Setiap node baru yang ditambahkan akan menjadi head baru,     dan node sebelumnya akan menjadi node berikutnya dari head baru tersebut.
         Contoh Input/Output:
