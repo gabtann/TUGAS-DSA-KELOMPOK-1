@@ -1,37 +1,60 @@
 #include <stdio.h>
 
-void push(int st1[],int *top,int x)
-    {
-    st1[++(*top)]=x;
+#define MAX 100000
+
+// Dua stack untuk membuat antrian
+int stack1[MAX], stack2[MAX];
+int top1 = -1, top2 = -1;
+
+// Fungsi untuk memasukkan data ke antrian
+void enqueue(int nilai) {
+    stack1[++top1] = nilai;
 }
-void pop(int st1[],int st2[],int *top)
-    {
-    int top_2=-1,c;
-    while(*top>=0)
-        st2[++top_2]=st1[(*top)--];
-    top_2--;
-    while(top_2>=0)
-        st1[++(*top)]=st2[top_2--];
+
+// Fungsi untuk memindahkan data dari stack1 ke stack2
+void pindah() {
+    while (top1 >= 0) {
+        stack2[++top2] = stack1[top1--];
+    }
 }
+
+// Fungsi untuk menghapus data terdepan dari antrian
+void dequeue() {
+    if (top2 == -1) {
+        pindah(); // Pindah data jika stack2 kosong
+    }
+    if (top2 >= 0) {
+        top2--; // Hapus data paling atas di stack2
+    }
+}
+
+// Fungsi untuk melihat data terdepan dari antrian
+void tampilDepan() {
+    if (top2 == -1) {
+        pindah(); // Pindah data jika stack2 kosong
+    }
+    if (top2 >= 0) {
+        printf("%d\n", stack2[top2]); // Tampilkan elemen paling atas di stack2
+    }
+}
+
 int main() {
-    int st1[100000],st2[100000],top=-1,q,x,ch;
-    scanf("%d",&q);
-    while(q--)
-        {
-        scanf("%d",&ch);
-        switch(ch)
-            {
-            case 1:
-            scanf("%d",&x);
-            push(st1,&top,x);
-            break;
-            case 2:
-            pop(st1,st2,&top);
-            break;
-            case 3:
-            printf("%d\n",st1[0]);
-            break;
+    int q, perintah, data;
+
+    // Input jumlah perintah
+    scanf("%d", &q);
+
+    while (q--) {
+        scanf("%d", &perintah);
+        if (perintah == 1) {
+            scanf("%d", &data);
+            enqueue(data);
+        } else if (perintah == 2) {
+            dequeue();
+        } else if (perintah == 3) {
+            tampilDepan();
         }
-    }  
+    }
+
     return 0;
 }
