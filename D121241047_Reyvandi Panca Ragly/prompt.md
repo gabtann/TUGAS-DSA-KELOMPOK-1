@@ -1,6 +1,9 @@
 # AI Prompt dan Analisis
 
-**Link Percakapan:** [https://chatgpt.com/share/681eb768-86c8-8009-bd66-1c43fdb4bbe4](https://chatgpt.com/share/6821db46-e560-8011-8e37-92eedd9c596f)
+**Link Percakapan:**  
+[https://chatgpt.com/share/681eb768-86c8-8009-bd66-1c43fdb4bbe4](https://chatgpt.com/share/6821db46-e560-8011-8e37-92eedd9c596f)  
+[https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d](https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d)  
+[https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97](https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97)  
 
 ## Prompt (Sumber Soal)
 
@@ -47,3 +50,24 @@ Explanation: There is no path from vertex 0 to vertex 5.
 8. There are no self edges.
 
 ## Analisis dan Pendekatan Solusi
+
+### Analisis:
+
+#### 1. Struktur Graf:
+
+- Graf bersifat dua arah (undirected), artinya jika ada sisi [`u, v`], maka `u` terhubung ke `v` dan sebaliknya.
+- Graf bisa tidak terhubung (disconnected), sehingga mungkin tidak ada jalur antara `source` dan `destination`.
+- Simpul diberi label dari `0` hingga `n-1`, dan sisi diberikan dalam bentuk daftar pasangan [`ui, vi`].
+
+#### 2. Pendekatan:
+- Untuk menemukan jalur, kita perlu menjelajahi graf dari simpul `source` hingga mencapai `destination` atau kehabisan simpul yang dapat dikunjungi.
+- DFS atau BFS adalah pilihan yang tepat karena keduanya dapat menjelajahi semua simpul yang terhubung.
+- DFS lebih sederhana untuk diimplementasikan secara rekursif, sedangkan BFS cocok jika kita ingin jalur terpendek (tidak diperlukan di soal ini).
+
+#### 3. Representasi Graph:
+- Gunakan adjacency list untuk efisiensi. Setiap simpul memiliki daftar tetangga (neighbors).
+- Untuk graf dua arah, setiap sisi [`u, v`] ditambahkan ke daftar tetangga `u` dan `v`.
+
+#### 4. Kompleksitas:
+- Waktu: O(V + E), di mana `V` adalah jumlah simpul (`n`) dan `E` adalah jumlah sisi (panjang `edges`). Kita mungkin perlu mengunjungi semua simpul dan sisi untuk menemukan jalur.
+- Ruang: O(V) untuk adjacency list, set visited, dan tumpukan rekursi (untuk DFS).
