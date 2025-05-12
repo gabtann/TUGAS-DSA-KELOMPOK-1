@@ -1,9 +1,9 @@
 # AI Prompt dan Analisis
 
 **Link Percakapan:**  
-[https://chatgpt.com/share/681eb768-86c8-8009-bd66-1c43fdb4bbe4](https://chatgpt.com/share/6821db46-e560-8011-8e37-92eedd9c596f)  
-[https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d](https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d)  
-[https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97](https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97)  
+- [https://chatgpt.com/share/681eb768-86c8-8009-bd66-1c43fdb4bbe4](https://chatgpt.com/share/6821db46-e560-8011-8e37-92eedd9c596f)
+- [https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d](https://chatgpt.com/share/6821e651-689c-8011-a6d0-d3984801fc9d)
+- [https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97](https://grok.com/share/bGVnYWN5_18b67cb3-2d60-466a-a02a-1a4dfbc5ac97)  
 
 ## Prompt (Sumber Soal)
 buatlah kode dalam python untuk menyelesaikan sebuah masalah, dimana kita perlu menentukan apakah ada jalur yang valid dari simpul `source` ke simpul `destination` dalam graf dua arah (undirected graph) dengan `n` simpul yang diberi label dari `0` hingga `n-1`. Graf direpresentasikan sebagai array 2D edges, di mana setiap edges[`i`] = [`ui, vi`] menunjukkan adanya sisi dua arah antara simpul `ui` dan `vi`. Kita harus mengembalikan true jika jalur ada, dan false jika tidak.
