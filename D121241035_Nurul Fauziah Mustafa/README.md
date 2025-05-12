@@ -1,4 +1,4 @@
-# Tugas DSA - Graph
+# Tugas DSA - STACK
 
 *Nama:* Nurul Fauziah Mustafa  
 *NIM:* D121241035  
