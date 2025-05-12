@@ -1,60 +1,66 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 #define MAX 100000
 
-int stack1[MAX], stack2[MAX];
-int top1 = -1, top2 = -1;
+// Dua stack menggunakan array biasa
+int stack1[MAX], top1 = -1;
+int stack2[MAX], top2 = -1;
 
-void push1(int x) {
-    stack1[++top1] = x;
+// Fungsi push
+void push1(int value) {
+    stack1[++top1] = value;
 }
 
+void push2(int value) {
+    stack2[++top2] = value;
+}
+
+// Fungsi pop
 int pop1() {
     return stack1[top1--];
-}
-
-void push2(int x) {
-    stack2[++top2] = x;
 }
 
 int pop2() {
     return stack2[top2--];
 }
 
-int peek2() {
-    return stack2[top2];
+// Fungsi cek apakah stack kosong
+int isEmpty2() {
+    return top2 == -1;
 }
 
-void enqueue(int x) {
-    push1(x);
-}
-
-void transferStack1ToStack2() {
-    while (top1 != -1) {
-        push2(pop1());
+// Fungsi untuk memindahkan elemen dari stack1 ke stack2 jika stack2 kosong
+void shiftStacks() {
+    if (isEmpty2()) {
+        while (top1 >= 0) {
+            push2(pop1());
+        }
     }
 }
 
+// Fungsi enqueue
+void enqueue(int value) {
+    push1(value);
+}
+
+// Fungsi dequeue
 void dequeue() {
-    if (top2 == -1) {
-        transferStack1ToStack2();
-    }
+    shiftStacks();
     pop2();
 }
 
+// Fungsi untuk print elemen paling depan queue
 void printFront() {
-    if (top2 == -1) {
-        transferStack1ToStack2();
-    }
-    printf("%d\n", peek2());
+    shiftStacks();
+    printf("%d\n", stack2[top2]);
 }
 
+// Main
 int main() {
     int q, type, value;
     scanf("%d", &q);
 
-    for (int i = 0; i < q; i++) {
+    while (q--) {
         scanf("%d", &type);
         if (type == 1) {
             scanf("%d", &value);
