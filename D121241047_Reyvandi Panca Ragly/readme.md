@@ -2,7 +2,7 @@
 
 **Nama:** Reyvandi Panca Ragly  
 **NIM:** D121241047  
-**Problem Link:** [Graph: Find if Path Exists in Graph - LeetCode]([https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem](https://leetcode.com/problems/find-if-path-exists-in-graph/description/))  
+**Problem Link:** [Graph: Find if Path Exists in Graph - leetcode]([https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem](https://leetcode.com/problems/find-if-path-exists-in-graph/description/))  
 **Difficulty:** Easy  
 
 ## Short Approach Summary
