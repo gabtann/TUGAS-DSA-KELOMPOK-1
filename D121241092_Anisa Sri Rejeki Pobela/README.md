@@ -1,4 +1,4 @@
-# Tugas DSA - Graph
+# Tugas DSA - TREES
 
 **Nama:** Anisa Sri Rejeki Pobela  
 **NIM:** D121241092  
