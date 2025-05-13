@@ -2,10 +2,9 @@
 
 **Link Percakapan:**  
 - [https://chatgpt.com/share/6821ec95-d780-8012-8422-711a3023ec2f](https://chatgpt.com/share/6821ec95-d780-8012-8422-711a3023ec2f)
-Berikut penjelasan lengkap dalam bahasa Indonesia untuk masalah implementasi antrian (queue) menggunakan dua tumpukan (stacks):
 
 ### Prompt (Sumber Soal)
-Buatlah kode dalam Python untuk mengimplementasikan antrian (queue) menggunakan dua tumpukan (stacks) dengan operasi:
+Buatlah kode dalam bahasa pemrograman apa saja untuk mengimplementasikan antrian (queue) menggunakan dua tumpukan (stacks) dengan operasi:
 1. **Enqueue**: Menambahkan elemen ke ujung antrian.
 2. **Dequeue**: Menghapus elemen dari depan antrian dan mengembalikan nilainya.
 3. **Front**: Mengembalikan elemen di depan antrian tanpa menghapusnya.
