@@ -38,7 +38,8 @@ void reverse(char *text) {
 int main() {
     char kata[MAX];
     printf("Masukkan kata: ");
-    scanf("%s", kata);
+    fgets(kata, MAX, stdin);
+
     reverse(kata);
     printf("Hasil dibalik: %s\n", kata);
     return 0;
