@@ -36,6 +36,15 @@ void printList(Node* head) {
     }
 }
 
+void freeList(Node* head) {
+    Node* temp;
+    while (head != NULL) {
+        temp = head;
+        head = head->next;
+        free(temp);
+    }
+}
+
 int main() {
     int n, x;
     LinkedList list;
@@ -52,6 +61,7 @@ int main() {
     }
 
     printList(list.head);
+    freeList(list.head);
 
     return 0;
 }
