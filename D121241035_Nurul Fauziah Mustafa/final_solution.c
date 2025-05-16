@@ -40,6 +40,8 @@ int main() {
     printf("Masukkan kata: ");
     fgets(kata, MAX, stdin);
 
+    kata[strcspn(kata, "\n")] = '\0';
+
     reverse(kata);
     printf("Hasil dibalik: %s\n", kata);
     return 0;
